@@ -27,6 +27,16 @@ public class Robot {
 
     @Override
     public String toString() {
+        System.out.println("Hello! My name is " + getName() + " and my model is " + getModel() + ".");
+        boolean handStatus = getHandStatus();
+        boolean headStatus = getHeadStatus();
+        boolean legStatus = getLegsStatus();
+        if (handStatus && headStatus && legStatus) {
+            System.out.println("I am ready to work.");
+        }
+        else {
+            System.out.println("I am not ready to work.");
+        }
         return "Robot{" +
                 "name='" + name + '\'' +
                 ", model='" + model + '\'' +
